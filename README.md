@@ -241,3 +241,27 @@ OWASP Juice Shop and any contributions are Copyright © by Bjoern Kimminich & th
 2014-2026.
 
 ![Juice Shop Logo](https://raw.githubusercontent.com/juice-shop/juice-shop/master/frontend/src/assets/public/images/JuiceShop_Logo_400px.png)
+# Cybersecurity Internship Project
+## OWASP Juice Shop Security Assessment
+
+### Week 1: Security Assessment
+- Performed manual XSS and SQL Injection testing
+- Ran OWASP ZAP automated scan
+- Found 7 vulnerabilities
+
+### Week 2: Security Implementation  
+- Enabled XSS filter via Helmet.js
+- Created input validation middleware
+- Created password hashing middleware
+- Created JWT authentication middleware
+
+### Week 3: Advanced Security
+- Performed Nmap penetration testing
+- Implemented Winston security logging
+- Created security best practices checklist
+
+### Tools Used
+- OWASP Juice Shop v19.2.1
+- OWASP ZAP 2.17.0
+- Nmap
+- Helmet.js, Validator.js, Bcrypt, JsonWebToken, Winston
