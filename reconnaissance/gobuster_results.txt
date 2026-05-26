@@ -1,0 +1,6 @@
+media               [36m (Status: 301)[0m [Size: 155][34m [--> /media/][0m
+profile             [31m (Status: 500)[0m [Size: 1031]
+assets              [36m (Status: 301)[0m [Size: 156][34m [--> /assets/][0m
+redirect            [31m (Status: 500)[0m [Size: 3471]
+api                 [31m (Status: 500)[0m [Size: 3369]
+restaurants         [31m (Status: 500)[0m [Size: 3385]
