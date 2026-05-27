@@ -197,6 +197,8 @@ app.use(corsConfig);
 app.use(helmet_1.default.noSniff());
 app.use(helmet_1.default.frameguard({ action: 'deny' }));
 const { apiLimiter, authLimiter } = require('./middleware/rateLimiter');
+const csrfProtection = require("./middleware/csrfProtection");
+app.use(csrfProtection);
 app.use('/api/', apiLimiter);
 app.use('/rest/user/login', authLimiter);
 app.use((req, res, next) => {
