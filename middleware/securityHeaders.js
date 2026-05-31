@@ -13,8 +13,8 @@ const securityHeaders = helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc:  ["'self'"],
-      scriptSrc:   ["'self'", "'unsafe-inline'"],
-      styleSrc:    ["'self'", "'unsafe-inline'"],
+      scriptSrc:   ["'self'"],
+      styleSrc:    ["'self'"],
       imgSrc:      ["'self'", "data:", "blob:"],
       connectSrc:  ["'self'"],
       fontSrc:     ["'self'"],
@@ -22,13 +22,13 @@ const securityHeaders = helmet({
       frameSrc:    ["'none'"],
       upgradeInsecureRequests: [],
     }
-  },
-
-  frameguard:     { action: 'deny' },
-  noSniff:        true,
-  referrerPolicy: { policy: 'strict-origin-when-cross-origin' },
-  hidePoweredBy:  true
-
+  });app.use((req, res, next) => {
+  res.removeHeader('X-Powered-By');
+  res.removeHeader('Date');           // ← Hides timestamp
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  next();
 });
 
+  
 module.exports = securityHeaders;
